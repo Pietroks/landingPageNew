@@ -105,8 +105,8 @@
               <span id="typed" class="fs-5 text-light d-block mb-2 textoSurge"></span>
             </div>
           </div>
-          <div class="col-12 col-md-6" data-aos="fade-up">
-            <img loading="lazy" src="./images/homem-pg-principal.png" class="imagePrincipal" alt="Homem programando" />
+          <div class="col-12 col-md-6">
+            <img loading="lazy" src="./images/homem-pg-principal.png" class="imagePrincipal" alt="Homem programando" data-aos="fade-up" />
           </div>
         </div>
       </div>
@@ -159,8 +159,7 @@
                 </p>
                 <div class="divButtonCurso" data-aos="fade-up">
                   <a href="https://melhoreseusresultados.com.br/gestao-ti" rel="noopener noreferrer" target="_blank" class="buttonCurso"
-                    >INSCREVA-SE
-                    <img src="./images/inscreva-se-symbol.png" data-aos="fade-up" loading="lazy" alt="icon seta" class="imgSeta"
+                    >INSCREVA-SE <img src="./images/inscreva-se-symbol.png" loading="lazy" alt="icon seta" class="imgSeta"
                   /></a>
                 </div>
               </div>
@@ -174,9 +173,9 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center containerButtons">
-            <div class="divProfissionalTextos" data-aos="fade-up">
-              <p class="profissinal">PROFISSIONAL DE</p>
-              <h2 class="alta">ALTA</h2>
+            <div class="divProfissionalTextos">
+              <p data-aos="fade-up" class="profissinal">PROFISSIONAL DE</p>
+              <h2 data-aos="fade-up" class="alta">ALTA</h2>
               <h2 class="performance">PERFORMANCE</h2>
               <p class="profissinal2">
                 aqui, formar vai muito além do diploma. Preparamos você para ser <strong>destaque</strong> no mercado
@@ -186,6 +185,7 @@
               src="./images/freepik__enhance__27823 copiar.png"
               class="imgDestaque"
               loading="lazy"
+              data-aos="fade-up"
               alt="Homem Representando Um Profissional Formado Pela Faculdade Uníntese"
             />
 
@@ -246,27 +246,26 @@
             <p id="text4" class="texts">
               <strong>Inteligência Colaborativa</strong><br />Trabalha em rede, aprende<br />em comunidade, entrega<br />em equipe.
             </p>
+          </div>
 
-            <!-- Gaveta para mobile -->
-            <div class="gavetaMobile d-md-none" data-aos="fade-up">
-              <button class="toggleGaveta">Mostrar Informações</button>
-              <div class="conteudoGaveta">
-                <div class="itemGaveta">
-                  <img class="iconeGaveta" alt="Icone simbolizando TI" />
-                  <p><strong>Visão Estratégica</strong><br />Conecta tecnologia<br />com resultados reais</p>
-                </div>
-                <div class="itemGaveta">
-                  <img class="iconeGaveta" alt="Icone simbolizando TI" />
-                  <p><strong>Domínio Técnico</strong><br />Cria soluções<br />com eficiência prática</p>
-                </div>
-                <div class="itemGaveta">
-                  <img class="iconeGaveta" alt="Icone simbolizando TI" />
-                  <p><strong>Execução Rápida</strong><br />Transforma ideias<br />em projetos</p>
-                </div>
-                <div class="itemGaveta">
-                  <img class="iconeGaveta" alt="Icone simbolizando TI" />
-                  <p><strong>Inteligência Colaborativa</strong><br />Trabalha em rede,<br />entrega em equipe</p>
-                </div>
+          <div class="gavetaMobile d-lg-none">
+            <button class="toggleGaveta">Mostrar Informações</button>
+            <div class="conteudoGaveta">
+              <div class="itemGaveta">
+                <img class="iconeGaveta" alt="Icone simbolizando TI" />
+                <p><strong>Visão Estratégica</strong><br />Conecta tecnologia<br />com resultados reais</p>
+              </div>
+              <div class="itemGaveta">
+                <img class="iconeGaveta" alt="Icone simbolizando TI" />
+                <p><strong>Domínio Técnico</strong><br />Cria soluções<br />com eficiência prática</p>
+              </div>
+              <div class="itemGaveta">
+                <img class="iconeGaveta" alt="Icone simbolizando TI" />
+                <p><strong>Execução Rápida</strong><br />Transforma ideias<br />em projetos</p>
+              </div>
+              <div class="itemGaveta">
+                <img class="iconeGaveta" alt="Icone simbolizando TI" />
+                <p><strong>Inteligência Colaborativa</strong><br />Trabalha em rede,<br />entrega em equipe</p>
               </div>
             </div>
           </div>
@@ -440,15 +439,15 @@
         }, 500);
       }
 
-      if (window.innerWidth > 768) {
-        document.querySelectorAll(".button11").forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const targetId = btn.getAttribute("data-target");
-            const texto = document.getElementById(targetId);
-            criarTrilhaComAnimacao(btn, texto);
-          });
+      document.querySelectorAll(".button11").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (window.innerWidth <= 768) return;
+
+          const targetId = btn.getAttribute("data-target");
+          const texto = document.getElementById(targetId);
+          criarTrilhaComAnimacao(btn, texto);
         });
-      }
+      });
 
       document.addEventListener("DOMContentLoaded", () => {
         const iconeGavetaSrc = "./images/simbolo TI.png";

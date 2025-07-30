@@ -135,7 +135,7 @@ body {
 }
 
 .imagePrincipal {
-  width: 131%;
+  width: 115%;
   position: relative;
   animation: pulse 3s infinite ease-in-out;
 }
@@ -155,8 +155,8 @@ body {
   text-align: center;
   font-size: 8rem;
   font-weight: 700;
-  margin-top: 16rem;
-  margin-bottom: 6rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
   color: whitesmoke;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* sombra no texto */
 }
@@ -375,6 +375,109 @@ body {
 }
 
 /* RESPONSIVE STYLES */
+@media (max-width: 1366px) {
+  .tituloH1 {
+    font-size: 6rem;
+  }
+
+  .imagePrincipal {
+    width: 100%;
+  }
+
+  .imgDestaque {
+    top: -27%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 1114px) {
+  .tituloH1 {
+    font-size: 3.8rem;
+  }
+
+  .tituloH1 strong {
+    font-size: 7rem;
+  }
+
+  .imagePrincipal {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .divButton {
+    width: auto;
+  }
+
+  .containerCursos {
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .divCurso {
+    width: 50%;
+  }
+
+  .imgCurso {
+    width: 350px;
+  }
+
+  .profissinal2 {
+    margin-left: 0rem;
+    font-size: 1rem;
+  }
+
+  .performance {
+    font-size: 6rem;
+  }
+
+  .imgDestaque {
+    top: -5%;
+    width: 100%;
+  }
+
+  .gavetaMobile {
+    display: none;
+  }
+
+  #button1 {
+    top: 52%;
+  }
+
+  #text1 {
+    top: 43%;
+    left: 79%;
+  }
+
+  #button2 {
+    top: 70%;
+    left: 87%;
+  }
+
+  #text2 {
+    top: 54%;
+    left: 77%;
+  }
+
+  #button3 {
+    top: 75%;
+    left: 50%;
+  }
+
+  #text3 {
+    top: 67%;
+  }
+
+  #button4 {
+    top: 56%;
+    left: 41%;
+  }
+
+  #text4 {
+    top: 46%;
+    left: 0%;
+  }
+}
+
 @media (max-width: 768px) {
   .tituloH1 {
     font-size: 2.5rem;
@@ -397,7 +500,7 @@ body {
 
   .imagePrincipal {
     width: 100%;
-    margin-top: auto;
+    margin-top: 5rem;
   }
 
   .divBolinhaVerde {
@@ -407,7 +510,7 @@ body {
 
   .textCursos {
     font-size: 5rem;
-    margin-top: 10rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
   }
 
@@ -416,15 +519,19 @@ body {
     align-items: center;
   }
 
+  .divCurso {
+    width: 100%;
+  }
+
   .imgCursoSvG {
-    width: 70px;
+    width: 65px;
     top: -5%;
     left: 0%;
-    border-radius: 30px;
+    border-radius: 26px;
   }
 
   .imgCurso {
-    width: 390px;
+    width: 350px;
   }
 
   .profissinal {
@@ -433,13 +540,13 @@ body {
   }
 
   .alta {
-    font-size: 8rem;
+    font-size: 7.8rem;
     margin-bottom: auto;
     margin-top: auto;
   }
 
   .performance {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .profissinal2 {
@@ -501,5 +608,23 @@ body {
   .itemGaveta img {
     width: 40px;
     margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 690px) {
+  .tituloH1 strong {
+    font-size: 5rem;
+  }
+
+  .gavetaMobile {
+    margin-top: 2rem;
+    text-align: center;
+    display: block;
+  }
+}
+
+@media (max-width: 430px) {
+  .tituloH1 strong {
+    font-size: 3rem;
   }
 }
