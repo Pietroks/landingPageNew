@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: whitesmoke;
+}
+
+.background1 {
+  background: linear-gradient(to right, #200935, #210a38, #250b3b, #200937);
+  background-size: 200% 200%;
+  animation: bgAnim 15s ease infinite;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@keyframes bgAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#backToTop {
+  display: none;
+}
+
+.tituloH1 {
+  font-size: 7rem;
+}
+
+.subTitulo {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.paragrafo1 {
+  font-size: 1.4rem;
+  color: whitesmoke;
+}
+
+.containerCirculos {
+  justify-content: left;
+}
+
+.divBolinhaVerde {
+  background-color: #04ff09;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: -4.5rem;
+  margin-right: 1rem;
+}
+
+.imgCirculo {
+  border-radius: 100px;
+  border: 2px solid whitesmoke;
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+
+#image1 {
+  position: relative;
+}
+
+#image2 {
+  position: relative;
+  left: -1.5rem;
+}
+
+#image3 {
+  position: relative;
+  left: -3.5rem;
+}
+
+#image4 {
+  position: relative;
+  left: -5.5rem;
+}
+
+#image2:hover,
+#image1:hover,
+#image3:hover,
+#image4:hover {
+  z-index: 5;
+  transform: scale(1.2);
+  rotate: 360deg;
+}
+
+.divButton {
+  margin: 2rem 0;
+  border-radius: 100px;
+  border: 2px solid whitesmoke;
+  padding: 0.5rem;
+  width: 50%;
+  display: flex;
+  transition: 0.5s ease-in-out;
+}
+
+.buttonInscrevase {
+  text-decoration: none;
+  background: whitesmoke;
+  color: #200935;
+  border-radius: 30px;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+.buttonInscrevase:hover {
+  background: #200935;
+  color: whitesmoke;
+}
+
+.divButton:hover {
+  border: 2px solid #04ff09;
+  background: whitesmoke;
+}
+
+#backToTop {
+  display: none;
+}
+
+.textoSurge {
+  position: absolute;
+}
+
+.imagePrincipal {
+  width: 131%;
+  position: relative;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 15px #30134d) drop-shadow(0 0 30px #32154f);
+  }
+  50% {
+    filter: drop-shadow(0 30px 30px #2e1249) drop-shadow(0 0 60px #b2abb9);
+  }
+}
+
+/* SECTION 2 */
+.textCursos {
+  text-align: center;
+  font-size: 8rem;
+  font-weight: 700;
+  margin-top: 16rem;
+  margin-bottom: 6rem;
+  color: whitesmoke;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* sombra no texto */
+}
+
+.containerCursos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.divCurso {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 1.4rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  width: 395px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+  margin-bottom: 3rem;
+}
+
+.divCurso:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 1.2);
+}
+
+.imgCursoSvG {
+  width: 90px;
+  height: auto;
+  position: absolute;
+  padding: 1rem;
+  background: #21ceba;
+  border-radius: 37px;
+  top: -7%;
+  z-index: 1;
+  left: -5%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* sombra no ícone */
+}
+
+.imgCurso {
+  border-radius: 30px;
+  width: 395px;
+  height: auto;
+  object-fit: cover;
+  margin-left: 1.5rem;
+  margin-top: -1.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2); /* sombra na imagem */
+}
+
+.divCurso h3,
+.divCurso p {
+  color: black;
+  margin-top: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* sombra leve no texto */
+}
+
+.divCurso h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.divCurso p {
+  font-size: 0.9rem;
+  color: gray;
+  font-weight: 600;
+  margin-top: 0rem;
+}
+
+.divButtonCurso {
+  align-self: end;
+}
+
+.buttonCurso {
+  text-align: right;
+  background: black;
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* sombra no botão */
+}
+
+.imgSeta {
+  width: 20px;
+  height: auto;
+}
+
+.buttonCurso:hover {
+  background: #04ff09;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35); /* sombra mais intensa no hover */
+}
+
+/* SECTION 3 */
+.background2 {
+  background: radial-gradient(circle, #1a0025 0%, #0d001b 40%, #050011 70%, #000000 100%);
+}
+
+.divProfissionalTextos {
+  position: relative;
+}
+
+.profissinal {
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  font-weight: 100;
+  margin-bottom: -4rem;
+  letter-spacing: 7px;
+}
+
+.alta {
+  font-size: 18rem;
+  margin-bottom: -4rem;
+  font-weight: 700;
+}
+
+.performance {
+  font-size: 10rem;
+  font-weight: 700;
+}
+
+.profissinal2 {
+  text-align: left;
+  margin-left: 4.5rem;
+  width: 30%;
+  font-size: 1.6rem;
+  margin-top: -1rem;
+  width: 300;
+}
+
+.imgDestaque {
+  position: relative;
+  z-index: 0;
+  top: -25%;
+  left: 5%;
+  width: 45%;
+}
+
+/* SECTION 4 */
+.containerButtons {
+  position: relative;
+}
+
+.button11 {
+  width: 20px;
+  height: auto;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+#button1 {
+  left: 54%;
+  top: 38%;
+}
+
+#button2 {
+  top: 55%;
+  left: 69%;
+}
+
+#button3 {
+  top: 58%;
+  left: 53%;
+}
+
+#button4 {
+  top: 41%;
+  left: 48%;
+}
+
+.button11:hover {
+  transform: scale(1.2) rotate(15deg);
+}
+
+.texts {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 2;
+  color: white;
+  text-align: left;
+}
+
+#text1 {
+  top: 39%;
+  left: 73%;
+}
+
+#text2 {
+  top: 58%;
+  left: 85%;
+}
+
+#text3 {
+  top: 63%;
+  left: 17%;
+}
+
+#text4 {
+  top: 49%;
+  left: 16%;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .tituloH1 {
+    font-size: 2.5rem;
+  }
+
+  .imgCirculo {
+    width: 40px;
+    height: 40px;
+  }
+
+  #image2,
+  #image3,
+  #image4 {
+    left: 0;
+  }
+
+  .divButton {
+    width: 100%;
+  }
+
+  .imagePrincipal {
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .divBolinhaVerde {
+    margin-left: auto;
+    margin-right: 0rem;
+  }
+
+  .textCursos {
+    font-size: 5rem;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+  }
+
+  .containerCursos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgCursoSvG {
+    width: 70px;
+    top: -5%;
+    left: 0%;
+    border-radius: 30px;
+  }
+
+  .imgCurso {
+    width: 390px;
+  }
+
+  .profissinal {
+    font-size: 1.8rem;
+    margin-bottom: auto;
+  }
+
+  .alta {
+    font-size: 8rem;
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+
+  .performance {
+    font-size: 3rem;
+  }
+
+  .profissinal2 {
+    text-align: center;
+    margin-left: auto;
+    width: auto;
+    font-size: 1rem;
+    margin-top: auto;
+  }
+
+  .imgDestaque,
+  .button11,
+  .trilha,
+  .texts {
+    display: none !important;
+  }
+
+  .gavetaMobile {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .toggleGaveta {
+    background: rgb(18, 0, 48);
+    color: whitesmoke;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .toggleGaveta:hover {
+    background: #21ceba;
+    color: black;
+  }
+
+  .conteudoGaveta {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .itemGaveta {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 15px;
+    width: 90%;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+  }
+
+  .itemGaveta img {
+    width: 40px;
+    margin-bottom: 0.5rem;
+  }
+}
