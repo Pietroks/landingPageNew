@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -299,10 +303,8 @@ body {
 }
 
 .imgDestaque {
-  position: relative;
-  z-index: 0;
-  top: -25%;
-  left: 5%;
+  margin-top: -26%;
+  margin-left: 9%;
   width: 45%;
 }
 
@@ -322,21 +324,21 @@ body {
 
 #button1 {
   left: 54%;
-  top: 38%;
+  top: 50%;
 }
 
 #button2 {
-  top: 55%;
+  top: 70%;
   left: 69%;
 }
 
 #button3 {
-  top: 58%;
-  left: 53%;
+  top: 77%;
+  left: 52%;
 }
 
 #button4 {
-  top: 41%;
+  top: 55%;
   left: 48%;
 }
 
@@ -355,8 +357,8 @@ body {
 }
 
 #text1 {
-  top: 39%;
-  left: 73%;
+  top: 50%;
+  left: 70%;
 }
 
 #text2 {
@@ -365,13 +367,57 @@ body {
 }
 
 #text3 {
-  top: 63%;
+  top: 78%;
   left: 17%;
 }
 
 #text4 {
-  top: 49%;
-  left: 16%;
+  top: 65%;
+  left: 19%;
+}
+
+/* FOOTER */
+.containerSocialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.socialMediaLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.socialMediaLink:hover {
+  background-color: #04ff09; /* destaque ao passar o mouse */
+  transform: scale(1.1);
+}
+
+.socialMediaLink svg {
+  width: 32px;
+  height: 32px;
+  color: whitesmoke;
+}
+
+.socialMediaLink:nth-child(1):hover {
+  background-color: #e1306c; /* Instagram */
+}
+.socialMediaLink:nth-child(2):hover {
+  background-color: #1877f2; /* Facebook */
+}
+.socialMediaLink:nth-child(3):hover {
+  background-color: #ff0033; /* Youtube */
 }
 
 /* RESPONSIVE STYLES */
@@ -387,6 +433,23 @@ body {
   .imgDestaque {
     top: -27%;
     width: 50%;
+  }
+
+  #button1 {
+    top: 55%;
+  }
+
+  #button2 {
+    top: 75%;
+    left: 70%;
+  }
+
+  #button3 {
+    top: 79%;
+  }
+
+  #button4 {
+    top: 59%;
   }
 }
 
@@ -530,10 +593,6 @@ body {
     border-radius: 26px;
   }
 
-  .imgCurso {
-    width: 350px;
-  }
-
   .profissinal {
     font-size: 1.8rem;
     margin-bottom: auto;
@@ -567,6 +626,7 @@ body {
   .gavetaMobile {
     margin-top: 2rem;
     text-align: center;
+    display: block;
   }
 
   .toggleGaveta {
@@ -626,5 +686,16 @@ body {
 @media (max-width: 430px) {
   .tituloH1 strong {
     font-size: 3rem;
+  }
+
+  .socialMediaLink {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 350px) {
+  .imgCurso {
+    width: 320px;
   }
 }
