@@ -141,17 +141,6 @@ body {
 .imagePrincipal {
   width: 115%;
   position: relative;
-  animation: pulse 3s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    filter: drop-shadow(0 0 15px #30134d) drop-shadow(0 0 30px #32154f);
-  }
-  50% {
-    filter: drop-shadow(0 30px 30px #2e1249) drop-shadow(0 0 60px #b2abb9);
-  }
 }
 
 /* SECTION 2 */
