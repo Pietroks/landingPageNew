@@ -25,8 +25,20 @@
 
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
   </head>
   <body class="background1">
+    <header class="fixed-header">
+      <div class="container d-flex justify-content-between align-items-center">
+        <img src="./images/logo-03.png" alt="Logo da Faculdade Uníntese" class="header-logo" />
+        <a href="#inscricao" class="btn btn-primary btn-sm">Inscreva-se</a>
+      </div>
+    </header>
+
     <section>
       <div class="container py-1">
         <div class="row align-items-center py-4">
@@ -266,6 +278,128 @@
       </div>
     </section>
 
+    <section class="container" id="hero">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <div class="divImageButton">
+            <img class="img-fluid" src="./images/mago-programador-01.png" alt="Logo da Escola de Programadores da Faculdade Uníntese" />
+            <a href="#" class="buttonSaibaMais"><img src="/images/botao-SAIBA-MAIS.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="col-md-6 text-center" data-aos="fade-left">
+          <div class="containerTitulo">
+            <img
+              class="img-fluid logoProgramador"
+              src="./images/logo-simbolo-medalha-escola-programadores.png"
+              alt="Ilustração de um mago com um cajado luminoso, representando o Mago da Programação."
+            />
+            <div class="divTitulo">
+              <h3 class="tituloEscola">escola de</h3>
+              <h3 class="tituloProgramadores">Programadores</h3>
+            </div>
+          </div>
+          <h1 class="display-4 mt-3">
+            A jornada para o <br />
+            <span id="efeito-maquina-escrever"></span>
+          </h1>
+          <p class="lead">
+            Um dos diferenciais dos cursos de tecnologia da Uníntese, é a Escola de Programadores. O programa tem o objetivo de desenvolver
+            habilidades em programação com foco em aplicação real desde o início da graduação. É estruturada em 3 níveis de aprendizado
+            progressivo, com encontros semanais ao vivo.
+          </p>
+          <a href="#inscricao" class="btn btn-primary btn-lg mt-3">Quero ser um Mago da Programação</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5 text-center" id="depoimentos">
+      <h2 class="display-5 mb-5" data-aos="fade-up">O que nossos Magos dizem</h2>
+      <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up" data-aos-delay="100">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./images/16498883-funny-nerdy-guy-wearing-glasses.webp"
+              class="rounded-circle mb-3"
+              alt="Foto de uma aluna sorrindo, satisfeita com o curso."
+            />
+            <div class="depoimento-texto">
+              <h5>Ana Clara</h5>
+              <p>
+                "O curso superou minhas expectativas! A didática é incrível e o suporte dos professores é constante. Consegui meu primeiro
+                emprego na área antes mesmo de terminar."
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/Gandalf_Tudo_que_precisa_saber_destaque_quinta_capa.webp"
+              class="rounded-circle mb-3"
+              alt="Foto de um aluno concentrado em seu notebook, aplicando os conhecimentos do curso."
+            />
+            <div class="depoimento-texto">
+              <h5>Lucas Mendes</h5>
+              <p>
+                "A abordagem prática foi o diferencial. Construir projetos reais desde o início me deu a confiança que eu precisava para
+                encarar o mercado de trabalho."
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/pngtree-black-man-smiling-on-a-black-background-image_2941286.webp"
+              class="rounded-circle mb-3"
+              alt="Foto de uma aluna fazendo anotações, engajada com o aprendizado."
+            />
+            <div class="depoimento-texto">
+              <h5>Sofia Pereira</h5>
+              <p>
+                "Finalmente um curso que ensina o que as empresas realmente procuram. A Escola de Programadores me preparou para os desafios
+                do dia a dia de um dev."
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/hq720.webp"
+              class="rounded-circle mb-3"
+              alt="Foto de uma aluna fazendo anotações, engajada com o aprendizado."
+            />
+            <div class="depoimento-texto">
+              <h5>João Silva</h5>
+              <p>
+                "Finalmente um curso que ensina o que as empresas realmente procuram. A Escola de Programadores me preparou para os desafios
+                do dia a dia de um dev."
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="container-fluid" id="inscricao">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-md-8" data-aos="zoom-in">
+            <h2 class="display-5">Aceite o chamado.</h2>
+            <p class="lead">
+              A magia do código o espera. Para avançar, é preciso concluir o nível anterior. Afinal, todo grande mago aprende a controlar
+              sua magia antes de conjurar os feitiços mais avançados. Suba de nível, desbloqueie novas habilidades e transforme-se no mestre
+              da programação!
+            </p>
+            <a href="#" class="btn btn-primary btn-lg mt-3">Inscreva-se Agora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <div class="container">
         <div class="row">
@@ -329,6 +463,7 @@
                 </svg>
               </a>
             </div>
+            <p class="text-center">&copy; 2025 Faculdade Uníntese. Todos os direitos reservados.</p>
           </div>
         </div>
       </div>
@@ -341,7 +476,7 @@
       class="position-fixed"
       style="bottom: 20px; left: 20px; z-index: 999"
     >
-      <img src="./images/whatsapp (1)-01.svg" alt="Fale conosco no WhatsApp" width="50" />
+      <img class="whatsapp-button" src="./images/whatsapp (1)-01.svg" alt="Fale conosco no WhatsApp" width="50" />
     </a>
 
     <!-- Voltar ao topo -->

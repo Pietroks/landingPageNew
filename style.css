@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "RetroTech";
+  src: url("/fonts/RETROTECH.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Berkahi";
+  src: url("/fonts/Berkahi Blackletter.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DePixelBreitF2";
+  src: url("/fonts/DePixelHalbfett.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --cor-primaria: #8a2be2; /* Roxo */
+  --cor-secundaria: #4b0082; /* Indigo */
+  --cor-texto: #ffffff;
+  --cor-fundo-escuro: #121212;
+  --cor-fundo-card: #1e1e1e;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -9,6 +37,193 @@ html {
 
 body {
   color: whitesmoke;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 10px 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-logo {
+  height: 40px;
+}
+
+.btn-primary {
+  background-color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--cor-secundaria);
+  border-color: var(--cor-secundaria);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: scale(0.98) translateY(0); /* Efeito de clique */
+}
+
+/* =================================================================== */
+/* BG 1                                 */
+/* =================================================================== */
+.background1 {
+  padding: 60px 0;
+  background: linear-gradient(-45deg, #1a0c2e, #2e0d4a, #4a0d6f, #2e0d4a);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#hero h1 {
+  font-weight: bold;
+}
+
+/* =================================================================== */
+/* CURSOS                                  */
+/* =================================================================== */
+.card-curso {
+  background-color: var(--cor-fundo-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 30px;
+}
+
+.card-curso:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3); /* Sombra roxa no hover */
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card-curso:hover .card-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.card-title,
+.card-text {
+  color: var(--cor-texto);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* =================================================================== */
+/* PERFORMANCE                                */
+/* =================================================================== */
+#performance {
+  background-color: var(--cor-fundo-card);
+  padding: 80px 0;
+}
+
+/* =================================================================== */
+/* DEPOIMENTOS                             */
+/* =================================================================== */
+#carouselDepoimentos .carousel-item {
+  padding: 20px 50px; /* Espaço para as setas não sobreporem o texto */
+}
+
+#carouselDepoimentos img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 4px solid var(--cor-primaria);
+}
+
+.depoimento-texto {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* =================================================================== */
+/* INSCRIÇÃO                               */
+/* =================================================================== */
+#inscricao {
+  background-image: url("./images/bkg-computador.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Efeito Parallax */
+  padding: 100px 0;
+  position: relative;
+}
+
+#inscricao::before {
+  /* Overlay para melhorar a legibilidade */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.7);
+}
+
+#inscricao .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* =================================================================== */
+/* BOTÃO WHATSAPP E ANIMAÇÃO                      */
+/* =================================================================== */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  background-color: #25d366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
 }
 
 .background1 {
@@ -37,6 +252,10 @@ body {
 
 .tituloH1 {
   font-size: 7rem;
+}
+
+.text-primary {
+  color: white !important;
 }
 
 .subTitulo {
@@ -389,7 +608,7 @@ body {
 }
 
 .socialMediaLink:hover {
-  background-color: #04ff09; /* destaque ao passar o mouse */
+  background-color: #04ff09;
   transform: scale(1.1);
 }
 
@@ -407,6 +626,10 @@ body {
 }
 .socialMediaLink:nth-child(3):hover {
   background-color: #ff0033; /* Youtube */
+}
+
+footer p {
+  margin-bottom: -3rem;
 }
 
 /* RESPONSIVE STYLES */
@@ -530,6 +753,60 @@ body {
   }
 }
 
+#efeito-maquina-escrever {
+  font-size: 2.5rem;
+}
+
+.divImageButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonSaibaMais {
+  position: relative;
+  margin-top: -10rem;
+}
+
+.containerTitulo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.logoProgramador {
+  position: relative;
+  width: 25%;
+  z-index: -1;
+  left: 4%;
+  top: -4rem;
+}
+
+.tituloEscola {
+  font-size: 2.3rem;
+  line-height: 0.9;
+  font-family: "RETROTECH", sans-serif;
+  color: white;
+  text-shadow: 6px 4px 3px #212121;
+  letter-spacing: 10px;
+  position: absolute;
+  top: 5%;
+  left: 37%;
+}
+
+.tituloProgramadores {
+  font-size: 5.2rem;
+  line-height: 0.9;
+  font-family: "Berkahi", sans-serif;
+  color: white;
+  text-shadow: 6px 4px 3px #212121;
+  margin-top: -2rem;
+}
+
+.lead {
+  text-align: left;
+}
 @media (max-width: 768px) {
   .tituloH1 {
     font-size: 2.5rem;
