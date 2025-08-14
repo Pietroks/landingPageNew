@@ -753,8 +753,14 @@ footer p {
   }
 }
 
+#efeito-maquina-escrever,
+.efeito-maquina-escrever {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
 #efeito-maquina-escrever {
-  font-size: 2.5rem;
+  color: #04ff09;
 }
 
 .background3 {
@@ -809,9 +815,121 @@ footer p {
   margin-top: -2rem;
 }
 
+.divTextos {
+  margin-top: -2rem;
+}
+
 .lead {
   text-align: left;
 }
+
+.containerImagemLevels {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerImagemLevels img {
+  width: 50%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.containerImagemLevels img:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  transform-style: preserve-3d;
+  transform: perspective(1500px);
+}
+
+.list .item {
+  transition: 0.5s;
+  filter: brightness(0.1);
+}
+
+.list .item:hover {
+  filter: brightness(1);
+  transform: translateZ(200px);
+}
+
+.list .item:hover + * {
+  filter: brightness(0.6);
+  transform: translateZ(150px) rotateY(40deg);
+}
+
+.list .item:hover + * + * {
+  filter: brightness(0.4);
+  transform: translateZ(70px) rotateY(20deg);
+}
+
+/* INFINITY SLIDE */
+.slider2 {
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10% 90%, transparent);
+  margin: 3rem;
+  background: brown;
+  display: flex;
+  align-items: center;
+}
+
+.slider2 .list2 {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+
+.slider2 .list2 .item2 {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoSlide 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1)) !important;
+  transition: filter 0.5s;
+  margin-top: -1rem;
+}
+@keyframes autoSlide {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+
+.slider2 .list2 .item2 img {
+  width: 100%;
+}
+
+.slider2:hover .item2 {
+  animation-play-state: paused !important;
+  filter: grayscale(1);
+}
+
+.slider2 .item2:hover {
+  filter: grayscale(0);
+}
+
+.textoSlideInfinito {
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+/* FIM INFINITY SLIDE */
+
 @media (max-width: 768px) {
   .tituloH1 {
     font-size: 2.5rem;
